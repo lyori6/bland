@@ -50,19 +50,17 @@ A TypeScript Cloudflare Worker manages key external tasks:
 
 *   **`/book-email` Endpoint:**
     *   **Input:** `email`, `interview_date` (DD-MM-YYYY), `interview_time` (HH:MM, PT).
-    *   **Actions:** Parses Time, generates `.ics` (ApyHub, aware of `America/Los_Angeles`), sends email (SendGrid, displays PT), triggers internal Slack alerts
+    *   **Actions:** Parses Time, generates `.ics` (ApyHub), sends email (SendGrid), triggers internal Slack alerts
 *   **`/slack-event` Endpoint:**
-    *   Internal route for sending Slack messages (Block Kit) to a configured channel.
-*   **Key Tech:** `@sendgrid/mail`, `date-fns-tz`.
-*   **Secrets:** `APY_TOKEN`, `SENDGRID_KEY`, `SLACK_BOOKINGS_URL`, `SLACK_ERRORS_URL`.
+    *   Internal route for sending Slack messages
 
-### Slack Alerts: Two Layers
+### Slack Alerts
 *   **Worker-Side:** For success/failure of the email & ICS process
-*   **Pathway-Side:** For critical Bland pathway failures (e.g., API calls within the pathway itself)
+*   **Pathway-Side:** For critical Bland pathway failures (e.g., user info lookup failure)
 
 ### Smart Prompting
 *   **Bland Tone:** Consistent agent voice via global and node-specific prompts
-*   **Data Formatting:** Prompts guide the LLM to format dates/times correctly *within Bland* before data is sent to the worker
+*   **Data Formatting:** Prompts the LLM to format dates/times correctly *within Bland* before data is sent to the worker
 
 ---
 
@@ -81,20 +79,15 @@ I defined these key test scenarios in Bland's Pathway Test tab:
 
 ## 💡 Our Approach & Decisions
 
-*   **Date/Time:** The Bland pathway is prompted to format date/time (DD-MM-YYYY, HH:MM PT). The worker then ensures correct UTC for backend systems and clear Pacific Time display in emails. (Acknowledged as an area for future enhancement regarding full DST and multi-timezone input from users).
-*   **Project Focus:** Prioritized backend integrations (APIs, ICS, email, Slack) and pathway logic, as per assignment emphasis.
-*   **Tooling:** Used standard Bland features to solve problems effectively.
-*   **Efficiency:** Non-critical notifications (like worker-side Slack alerts) use `ctx.waitUntil` to keep main responses fast.
+*   **Date/Time:** The Bland pathway is prompted to format date/time (DD-MM-YYYY, HH:MM PT). The worker then ensures correct UTC for backend systems and clear Pacific Time display in emails. (Acknowledged as an area for future enhancement regarding full DST and multi-timezone input from users)
+*   **Project Focus:** Prioritized backend integrations (APIs, ICS, email, Slack) and pathway logic, as per assignment emphasis
 
 ---
 
 ## 🔮 Next Steps & Future Ideas
 
-*   **Enhanced Security:** Add request verification (e.g., HMAC signatures) to worker endpoints.
-*   **Advanced Timezone Handling:** Improve worker's ability to parse and manage interview times from users in *various* timezones, not just assuming Pacific Time input. This would also involve more robust Daylight Saving Time management.
-*   **Deeper Call Analysis:** More listening to live call patterns to further refine pathway flow and agent responses.
-*   **Richer Slack Messages:** Use more advanced Slack Block Kit features for more interactive or detailed alerts.
+*   **Deeper Call Analysis:** More listening to live call patterns to further refine pathway flow and agent responses
+*   **Enhanced Security:** Add request verification (e.g., HMAC signatures) to worker endpoints
+*   **Advanced Timezone Handling:** Improve worker's ability to parse and manage interview times from users in *various* timezones, not just assuming Pacific Time input. This would also involve more robust Daylight Saving Time management
+*   **Richer Slack Messages:** Use more advanced Slack Block Kit features for more interactive or detailed alerts
 
----
-
-This project delivers a more capable and operationally sound recruiting pathway.
