@@ -28,7 +28,7 @@ This pathway now offers a better experience and clearer operational tracking:
 
 ---
 
-## 🗺️ Pathway Journey: A Quick Look
+## 🗺️ Pathway Journey
 
 The applicant's experience is now more direct and reliable:
 
@@ -68,7 +68,7 @@ A TypeScript Cloudflare Worker manages key external tasks:
 
 ---
 
-## ✅ Testing Our Work
+## ✅ Testing
 
 I defined these key test scenarios in Bland's Pathway Test tab:
 
@@ -81,7 +81,7 @@ I defined these key test scenarios in Bland's Pathway Test tab:
 
 ---
 
-## 💡 Our Approach & Decisions
+## 💡 Approach & Decisions
 
 *   **Date/Time (Simplified for MVP):** For this iteration, the Bland pathway is prompted to format date/time inputs as DD-MM-YYYY and HH:MM, assumed to be Pacific Time (PT) The Cloudflare Worker converts this to UTC for backend systems, ensuring email displays and calendar invites are PT-aware **Constraint:** This simplified model assumes bookings don't occur late enough in PT to shift the UTC date to the next day in a way that causes discrepancies with user expectations before full timezone conversion logic is implemented This is an area for future refinement to robustly handle various user timezones and Daylight Saving Time intricacies more directly
 *   **Salary Collection Flexibility:** If an applicant declines to provide salary information, the pathway acknowledges this and proceeds, defaulting to the standard salary path, ensuring the conversation continues smoothly
@@ -90,7 +90,7 @@ I defined these key test scenarios in Bland's Pathway Test tab:
 
 ---
 
-## 🔮 Next Steps & Future Ideas
+## 🔮 Future Ideas
 
 *   **Enhanced Security:** Add request verification (eg, HMAC signatures) to worker endpoints
 *   **Advanced Timezone Management:** Implement more comprehensive timezone handling in the Cloudflare Worker to accurately parse and manage interview times from users across *various* input timezones, including full Daylight Saving Time (DST) logic This would address the current constraint around evening bookings and potential date shifts
