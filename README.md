@@ -70,7 +70,7 @@ A TypeScript Cloudflare Worker manages key external tasks:
 
 ## ✅ Testing
 
-I defined these key test scenarios in Bland's Pathway Test tab:
+Test Pathway
 
 1.  **Happy Path:** Booking confirmed, calendar invite sent
 2.  **High Salary:** Salary > $500k, call transferred to recruiter
@@ -78,12 +78,13 @@ I defined these key test scenarios in Bland's Pathway Test tab:
 4.  **Lookup Retry Success:** `/get-user-info` fails once, succeeds on retry, flow continues
 5.  **User Requested End Call:** Global node handles user's request to hang up
 6.  **Caller Not Free:** Call ends politely if user is unavailable at start
+7.  **Decline To Provide Salary:** Applicant refuses to state salary, pathway proceeds assuming <$500k
 
 ---
 
 ## 💡 Approach & Decisions
 
-*   **Date/Time (Simplified for MVP):** For this iteration, the Bland pathway is prompted to format date/time inputs as DD-MM-YYYY and HH:MM, assumed to be Pacific Time (PT) The Cloudflare Worker converts this to UTC for backend systems, ensuring email displays and calendar invites are PT-aware **Constraint:** This simplified model assumes bookings don't occur late enough in PT to shift the UTC date to the next day in a way that causes discrepancies with user expectations before full timezone conversion logic is implemented This is an area for future refinement to robustly handle various user timezones and Daylight Saving Time intricacies more directly
+*   **Date/Time (MVP Approach):** Bland pathway formats inputs to DD-MM-YYYY & HH:MM (assumed PT) Worker converts to UTC for backend systems and ensures PT-aware displays (email/ICS) **Known Compromise:** Simplified logic for this iteration means very late PT evening bookings might have UTC date discrepancies; full multi-timezone/DST handling is a future refinement
 *   **Salary Collection Flexibility:** If an applicant declines to provide salary information, the pathway acknowledges this and proceeds, defaulting to the standard salary path, ensuring the conversation continues smoothly
 *   **Project Focus:** Prioritized backend integrations and pathway logic, per assignment
 *   **Tooling:** Used standard Bland basic plan for self-sufficient problem-solving
