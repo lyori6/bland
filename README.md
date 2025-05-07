@@ -50,7 +50,7 @@ A TypeScript Cloudflare Worker manages key external tasks:
 
 *   **`/book-email` Endpoint:**
     *   **Input:** `email`, `interview_date` (DD-MM-YYYY), `interview_time` (HH:MM, PT).
-    *   **Actions:** Parses Pacific Time to UTC, generates `.ics` (ApyHub, aware of `America/Los_Angeles`), sends email (SendGrid, displays PT), triggers internal Slack alerts
+    *   **Actions:** Parses Time, generates `.ics` (ApyHub, aware of `America/Los_Angeles`), sends email (SendGrid, displays PT), triggers internal Slack alerts
 *   **`/slack-event` Endpoint:**
     *   Internal route for sending Slack messages (Block Kit) to a configured channel.
 *   **Key Tech:** `@sendgrid/mail`, `date-fns-tz`.
