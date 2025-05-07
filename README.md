@@ -68,9 +68,7 @@ A TypeScript Cloudflare Worker manages key external tasks:
 
 ---
 
-## ✅ Testing
-
-Test Pathway
+## ✅ Test Pathway
 
 1.  **Happy Path:** Booking confirmed, calendar invite sent
 2.  **High Salary:** Salary > $500k, call transferred to recruiter
