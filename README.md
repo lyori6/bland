@@ -139,4 +139,4 @@ This enhanced pathway provides a reliable, user-friendly, and operationally tran
 *   [Current Enhanced Pathway](https://app.bland.ai/dashboard/convo-pathways?id=a06ee867-afbb-4736-b580-4125768c3899)
 
 **(Link to Cloudflare Worker Code if included in the repo)**
-*   [Cloudflare Worker Code]((https://github.com/lyori6/bland-cloudflare-clean))
+*   [Cloudflare Worker Code](https://github.com/lyori6/bland-cloudflare-clean)
