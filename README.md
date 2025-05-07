@@ -1,6 +1,6 @@
 # Support Engineer Recruiting Pathway 
 
-**Objective:** This project upgrades Bland AI's "Support Engineer Recruiting Pathway" I aimed for a solution that's not just functional but also reliable, user-friendly, and gives clear operational insights—the "120% solution"
+**Objective:** This project upgrades Bland AI's "Support Engineer Recruiting Pathway" I aimed for a solution that's not just functional but also reliable, user-friendly, and gives clear operational insights the "120% solution"
 
 🔗 **Live Demo & Resources**
 *   **Project Documentation & Overview:** [https://lyori6.github.io/bland/](https://lyori6.github.io/bland/) (This README)
