@@ -135,8 +135,8 @@ Five key unit test scenarios were defined and (conceptually, or if UI allows, ph
 This enhanced pathway provides a reliable, user-friendly, and operationally transparent solution for the initial stages of Support Engineer recruiting.
 
 **(Link to JSON files for the pathway if included in the repo)**
-*   [Original Unsolved Pathway](./pathway_json/unsolved%20-%20pathway%20(2).json)
-*   [Current Enhanced Pathway](./pathway_json/new%20renamed%20pathway.json)
+*   [Original Unsolved Pathway](https://app.bland.ai/dashboard/convo-pathways?id=22e38484-e3b3-4870-99fe-3347f7a87537)
+*   [Current Enhanced Pathway](https://app.bland.ai/dashboard/convo-pathways?id=a06ee867-afbb-4736-b580-4125768c3899)
 
 **(Link to Cloudflare Worker Code if included in the repo)**
-*   [Cloudflare Worker Code](./cloudflare_worker_code/)
+*   [Cloudflare Worker Code]((https://github.com/lyori6/bland-cloudflare-clean))
