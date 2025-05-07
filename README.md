@@ -91,7 +91,7 @@ A TypeScript Cloudflare Worker manages key external tasks:
 
 ## 🔮 Future Ideas
 
-*   **Enhanced Security:** Add request verification (eg, HMAC signatures) to worker endpoints
-*   **Advanced Timezone Management:** Implement more comprehensive timezone handling in the Cloudflare Worker to accurately parse and manage interview times from users across *various* input timezones, including full Daylight Saving Time (DST) logic This would address the current constraint around evening bookings and potential date shifts
 *   **Deeper Call Analysis:** More listening to live call patterns to further refine pathway flow and agent responses
+*   *   **Advanced Timezone Management:** Implement more comprehensive timezone handling in the Cloudflare Worker to accurately parse and manage interview times from users across *various* input timezones, including full Daylight Saving Time (DST) logic This would address the current constraint around evening bookings and potential date shifts
+*   **Enhanced Security:** Add request verification (eg, HMAC signatures) to worker endpoints
 *   **Richer Slack Messages:** Use more advanced Slack Block Kit features for more interactive or detailed alerts
