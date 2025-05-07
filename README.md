@@ -4,7 +4,7 @@
 
 🔗 **Live Demo & Resources**
 *   **Project Documentation & Overview:** [https://lyori6.github.io/bland/](https://lyori6.github.io/bland/) (This README)
-*   **Loom Video Walkthrough:** `(Your Loom Video Link Here)`
+*   **Loom Video Walkthrough:** `(Loom Video Link Here)`
 *   **Live Bland Pathway (Enhanced):** [View Pathway](https://app.bland.ai/dashboard/convo-pathways?id=a06ee867-afbb-4736-b580-4125768c3899)
 *   **Original Pathway (Reference):** [View Original](https://app.bland.ai/dashboard/convo-pathways?id=22e38484-e3b3-4870-99fe-3347f7a87537)
 *   **Cloudflare Worker Code:** [View Worker Repo](https://github.com/lyori6/bland-cloudflare-clean)
