@@ -82,7 +82,7 @@ A TypeScript Cloudflare Worker manages key external tasks:
 
 ## 💡 Approach & Decisions
 
-*   **Date/Time (MVP Approach):** Bland pathway formats inputs to DD-MM-YYYY & HH:MM (assumed PT) Worker converts to UTC for backend systems and ensures PT-aware displays (email/ICS) **Known Compromise:** Simplified logic for this iteration means very late PT evening bookings might have UTC date discrepancies; full multi-timezone/DST handling is a future refinement
+*   **   **Date/Time (MVP Approach):** Bland formats inputs (DD-MM-YYYY, HH:MM PT) Worker ensures UTC backend & PT-aware displays (email/ICS) **Compromise:** Simple logic may cause UTC date shifts for late PT bookings; full timezone/DST handling is future work
 *   **Salary Collection Flexibility:** If an applicant declines to provide salary information, the pathway acknowledges this and proceeds, defaulting to the standard salary path, ensuring the conversation continues smoothly
 *   **Project Focus:** Prioritized backend integrations and pathway logic, per assignment
 *   **Tooling:** Used standard Bland basic plan for self-sufficient problem-solving
@@ -92,6 +92,6 @@ A TypeScript Cloudflare Worker manages key external tasks:
 ## 🔮 Future Ideas
 
 *   **Deeper Call Analysis:** More listening to live call patterns to further refine pathway flow and agent responses
-*   *   **Advanced Timezone Management:** Implement more comprehensive timezone handling in the Cloudflare Worker to accurately parse and manage interview times from users across *various* input timezones, including full Daylight Saving Time (DST) logic This would address the current constraint around evening bookings and potential date shifts
+*  Advanced Timezone Management: Implement more comprehensive timezone handling in the Cloudflare Worker to accurately parse and manage interview times from users across various input timezones, including full Daylight Saving Time (DST) logic This would address the current constraint around evening bookings and potential date shifts
 *   **Enhanced Security:** Add request verification (eg, HMAC signatures) to worker endpoints
 *   **Richer Slack Messages:** Use more advanced Slack Block Kit features for more interactive or detailed alerts
