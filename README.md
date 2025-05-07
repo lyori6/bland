@@ -87,7 +87,7 @@ I defined these key test scenarios in Bland's Pathway Test tab:
 *   **Salary Collection Flexibility:** If an applicant declines to provide salary information, the pathway acknowledges this and proceeds, defaulting to the standard salary path, ensuring the conversation continues smoothly
 *   **Project Focus:** Prioritized backend integrations and pathway logic, per assignment
 *   **Tooling:** Used standard Bland features for self-sufficient problem-solving
-*   **Efficiency:** Non-critical notifications use `ctx.waitUntil` to keep main responses fast
+#*   **Efficiency:** Non-critical notifications use `ctx.waitUntil` to keep main responses fast
 
 ---
 
